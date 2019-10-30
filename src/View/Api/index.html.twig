@@ -1,6 +1,10 @@
 
 
+{% for monster in monsters.monsters %}
+    {{ monster.name }} {{ monster.id }}<br>
+    <img src="{{ monster.picture }}" >
 
+{% endfor %}
     <ul>
         {% for movie in contents.movies %}
             <li>{{ movie.title }}</li>
