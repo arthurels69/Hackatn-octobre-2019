@@ -2,6 +2,12 @@
 
 {% block content %}
 
+    <ul>
+ {% for monster in monsters.monsters %}
 
+     <li>mon nom est {{ monster.name }}</li>
+
+    {% endfor %}
+    </ul>
 
 {% endblock %}
