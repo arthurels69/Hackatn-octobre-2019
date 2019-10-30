@@ -1,17 +1,16 @@
 
 
-{% for monster in monsters.monsters %}
-    {{ monster.name }} {{ monster.id }}<br>
-    <img src="{{ monster.picture }}" >
-
-{% endfor %}
-    <ul>
-        {% for movie in contents.movies %}
-            <li>{{ movie.title }}</li>
-        {% endfor %}
-
-    </ul>
-
 {% block content %}
-ggg
+        <form class="form-inline form-control d-flex justify-content-center border-0" method="post">
+            <select class="form-control m-1" id="level" name="level">
+                <option value="">Définissez votre budget</option>
+                <option value="1">500€</option>
+                <option value="2">1000€</option>
+                <option value="3">1500€</option>
+                <option value="4">2000€</option>
+                <option value="5">2500€</option>
+                <option value="all">no limit !</option>
+            </select>
+            <button type="submit" class="btn btn-primary m-1">Rechercher</button>
+        </form>
 {% endblock %}
