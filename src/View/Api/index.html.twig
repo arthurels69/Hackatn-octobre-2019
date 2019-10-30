@@ -1,14 +1,11 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <ul>
-        {% for monster in monsters.monsters %}
-            <li>{{ monster.name }}</li>
-        {% endfor %}
-    </ul>
+
     <ul>
         {% for movie in contents.movies %}
             <li>{{ movie.title }}</li>
         {% endfor %}
     </ul>
+
 {% endblock %}
