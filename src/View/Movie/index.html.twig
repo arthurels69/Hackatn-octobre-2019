@@ -9,11 +9,14 @@
                         <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ movie.title }}</h5>
-                            <button type="button" class="btn btn-danger">Choose your Movie</button>
+                            <form id="test" action="/Getmovie/movieCookie" method="post"><input type="hidden"
+                                                                                                    name="id"
+                                                                                                    value="{{ movie.id }}"/>
+                                <button type="submit" class="btn btn-danger">Choose your Movie</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-
             {% endfor %}
         </section>
     </div>
