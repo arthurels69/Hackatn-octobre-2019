@@ -18,5 +18,8 @@ class ApiController extends AbstractController
     public function candidature(){
         return $this->twig->render('Api/Candidature.html.twig');
     }
+    public function Validation(){
+        return $this->twig->render('Api/Validation.html.twig');
+    }
 }
 
