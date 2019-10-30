@@ -1,23 +1,24 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <ul style="list-style-type: none;">
+
+
+    <div class="container">
+    <section class="row">
     {% for monster in monsters.monsters %}
-        <li>
+        <div class="col-sx-4 mr-4 mb-3">
             <div class="card" style="width: 18rem;">
                 <img src="{{ monster.picture }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ monster.name }}</h5>
                     <p class="card-text">{{ monster.description }}</p>
-                    <button type="button" class="btn btn-danger">Sélectionner</button>
+                    <a href="/Movie/index?id={{ monster.id }}"><button type="button" class="btn btn-danger">Choose your monster</button></a>
                 </div>
             </div>
-        </li>
-        <li>
-
-        </li>
+        </div>
     {% endfor %}
-    </ul>
+        </section>
+        </div>
 
 
 {% endblock %}
