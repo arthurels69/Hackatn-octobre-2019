@@ -12,8 +12,10 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ monster.name }}</h5>
                     <p class="card-text">{{ monster.description }}</p>
-                    <form id="test" action="/Getmonster/monsterCookie" method="post"><input type="hidden" name="id" value="50"/></form>
-                    <a href="#"  class="btn btn-danger" onclick="document.getElementById('test').submit()">Choose your monster</a>
+                    <form id="test" action="/Getmonster/monsterCookie" method="post"><input type="hidden" name="id" value="{{ monster.id }}"/>
+                        <button type="submit"  class="btn btn-danger" >Choose your monster</button>
+                    </form>
+
                 </div>
             </div>
         </div>
