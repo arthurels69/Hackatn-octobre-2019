@@ -3,8 +3,18 @@
 {% block content %}
 
         {% for movie in contents.movies %}
-            <img src="{{ movie.posterUrl }}">
-            <li>{{ movie.title }}</li>
+            <div class="card" style="width: 18rem;">
+                <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
+                <div class="card-body">
+
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <button type="button" class="btn btn-danger">Choose your Movie</button>
+
+                </div>
+            </div>
+            <div class="">
+                <img src="">
+            </div>
         {% endfor %}
 
 {% endblock %}
