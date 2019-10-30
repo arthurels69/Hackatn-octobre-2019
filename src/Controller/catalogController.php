@@ -4,11 +4,11 @@ namespace App\Controller;
 use App\Model\AbstractManager;
 use App\Model\ApiManager;
 
-class ApiController extends AbstractController
+class CatalogController extends AbstractController
 {
     public function index()
     {
-        $apiManager = new ApiManager();
+        $apiManager = new CatalogManager();
         $getMovie = $apiManager->getAllMovies();
 
         $getMonsters = $apiManager->getAllMonsters();

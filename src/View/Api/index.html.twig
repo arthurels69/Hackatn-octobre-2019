@@ -1,7 +1,23 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+    <ul style="list-style-type: none;">
+    {% for monster in monsters.monsters %}
+        <li>
+            <div class="card" style="width: 18rem;">
+                <img src="{{ monster.picture }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ monster.name }}</h5>
+                    <p class="card-text">{{ monster.description }}</p>
+                    <button type="button" class="btn btn-danger">Sélectionner</button>
+                </div>
+            </div>
+        </li>
+        <li>
 
+        </li>
+    {% endfor %}
+    </ul>
 
 
 {% endblock %}
