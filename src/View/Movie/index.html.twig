@@ -8,7 +8,7 @@
                     <div class="card" style="width: 18rem;">
                         <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ movie.title }}</h5>
+                            <h5 class="card-title">{{ movie.title | replace({'_': " "}) }}</h5>
                             <a type="submit" href="/Api/Validation"  class="btn btn-danger">Choose your Movie</a>
                         </div>
                     </div>
