@@ -16,4 +16,3 @@ class ApiController extends AbstractController
         return $this->twig->render('Api/index.html.twig', ['contents' => $getMovie, 'monsters' => $getMonsters]);
     }
 }
-
