@@ -4,7 +4,7 @@ namespace App\Controller;
 use App\Model\AbstractManager;
 use App\Model\ApiManager;
 
-class ApiController extends AbstractController
+class MonsterController extends AbstractController
 {
     public function index()
     {
@@ -13,6 +13,6 @@ class ApiController extends AbstractController
 
         $getMonsters = $apiManager->getAllMonsters();
 
-        return $this->twig->render('Api/index.html.twig', ['contents' => $getMovie, 'monsters' => $getMonsters]);
+        return $this->twig->render('Monster/index.html.twig', ['contents' => $getMovie, 'monsters' => $getMonsters]);
     }
 }
