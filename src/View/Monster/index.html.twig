@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+
+    <div class="container">
+    <section class="row">
+    {% for monster in monsters.monsters %}
+        <div class="col-sx-4 mb-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ monster.picture }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ monster.name }}</h5>
+                    <p class="card-text">{{ monster.description }}</p>
+                    <form id="test" action="/Getmonster/monsterCookie" method="post"><input type="hidden" name="id" value="50"/></form>
+                    <a href="#"  class="btn btn-danger" onclick="document.getElementById('test').submit()">Choose your monster</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+        </section>
+        </div>
+
+
+{% endblock %}

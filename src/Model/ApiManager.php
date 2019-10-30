@@ -24,6 +24,7 @@ class ApiManager {
 
     public function getAllMonsters(){
         $getMonsters = $this->createQuery('monsters');
+
         return $getMonsters;
     }
 
