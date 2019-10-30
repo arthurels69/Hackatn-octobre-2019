@@ -22,4 +22,3 @@ class ApiController extends AbstractController
         return $this->twig->render('Api/Validation.html.twig');
     }
 }
-

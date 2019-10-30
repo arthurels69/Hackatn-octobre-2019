@@ -1,9 +1,11 @@
 
 
 
-     <li>mon nom est {{ monster.name }}</li>
+    <ul>
+        {% for movie in contents.movies %}
+            <li>{{ movie.title }}</li>
+        {% endfor %}
 
-    {% endfor %}
     </ul>
 
 {% block content %}
