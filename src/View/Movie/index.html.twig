@@ -8,7 +8,8 @@
                     <div class="card" style="width: 18rem;">
                         <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ movie.title }}</h5>
+
+                            <h5 class="card-title">{{ movie.title | replace({'_': " "}) }}</h5>
                             <form id="test" action="/Getmovie/movieCookie" method="post"><input type="hidden"
                                                                                                     name="id"
                                                                                                     value="{{ movie.id }}"/>
