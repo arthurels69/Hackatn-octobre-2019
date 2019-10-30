@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 
- class CandidatureController extends AbstractController {
+ class candidatureController extends AbstractController {
 
 
      public function index(){
