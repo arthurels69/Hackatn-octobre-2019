@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <section class="row">
+            {% for movie in contents.movies %}
+                <div class="col-xs-4 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ movie.title }}</h5>
+                            <button type="button" class="btn btn-danger">Choose your Movie</button>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </section>
+    </div>
+{% endblock %}
