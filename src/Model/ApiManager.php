@@ -3,8 +3,8 @@ namespace App\Model;
 
 use Symfony\Component\HttpClient\HttpClient;
 
-class ApiManager {
-
+class ApiManager
+{
     public function createQuery(string $url)
     {
         $client = HttpClient::create();
