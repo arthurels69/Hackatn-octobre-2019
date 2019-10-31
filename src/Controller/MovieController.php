@@ -12,5 +12,9 @@ class MovieController extends AbstractController
         $getMovie = $apiManager->getAllMovies();
         return $this->twig->render('Movie/index.html.twig', ['contents' => $getMovie]);
     }
+    public function FormRecap()
+    {
+        return $this->twig->render('Movie/FormRecap.html.twig');
+    }
 }
 
