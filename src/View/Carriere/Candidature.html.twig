@@ -1,0 +1,41 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+
+    <div class="container "></div>
+    <div class="offset-2 col-8 mt-5 mb-5">
+        <p>Si vous vous sentez capable vous pouez rejoindre notre réseau, il vous suffit de répondre à quelques
+            questions et
+            de nous envoyer quelques photos :</p>
+    </div>
+    <form action="/Api/Validation" method="post" enctype="multipart/form-data">
+
+
+        <div class="text-center offset-4 col-4 mb-3 ">
+            <label>Votre Nom</label><br>
+            <input name="nom">
+        </div>
+        <div class="text-center  offset-4 col-4 mb-3  ">
+            <label>Nom de tueur</label><br>
+            <input name="nomTueur"><br>
+        </div>
+        <div class="text-center offset-4 col-4 mb-3 ">
+            <label>Votre Niveau</label><br>
+            <input name="niveau"><br>
+        </div>
+        <div class="text-center offset-4 col-4 mb-3">
+            <label>Votre spécialité</label><br>
+            <input name="specialite"><br>
+        </div>
+        <div class="text-center offset-4 col-4 mb-5">
+            <input class="mt-5  " type="file" name="picture[]" multiple/>
+            <input type="submit" value="Send"/>
+
+        </div>
+    </form>
+
+
+
+
+{% endblock %}
