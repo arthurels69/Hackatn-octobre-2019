@@ -1,22 +1,63 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="FR">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="/assets/css/Navigation-with-Button.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
     {% block stylesheet %}{% endblock %}
-    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" href="/assets/img/favicon.png">
 </head>
 
 <body>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button mb-3">
+    <div class="container"><a class="navbar-brand" href="/" style="color: orange">RentAMonster</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse"
+             id="navcol-1">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/">Accueil</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/monster/index">Réservation</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/Carriere/Candidature">Carrières</a>
+                </li>
+            </ul>
 
+            <span class="navbar-text actions">
+                <a class="btn btn-light action-button" style="background-color: orange" role="button" href="/{{ lienLog }}">{{ log }}</a>
+
+                <a href="/Panier/index"><i class="fas fa-shopping-cart"></i></a>
+            </span>
+        </div>
+    </div>
+</nav>
 {% block content %}{% endblock %}
+<div class="footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="/">Accueil</a></li>
+            <li class="list-inline-item"><a href="/monster/index">Réservation</a></li>
+            <li class="list-inline-item"><a href="#">A propos</a></li>
+            <li class="list-inline-item"><a href="#">Conditions d'utilisation</a></li>
+        </ul>
+        <p class="copyright">HallOfWhine @ WildCodeSchool © 2019</p>
+    </footer>
+</div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/3c89dcba84.js" crossorigin="anonymous"></script>
+
 {% block javascript %}{% endblock %}
+
 </body>
+
 </html>
-
-
