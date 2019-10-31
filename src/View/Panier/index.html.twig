@@ -17,34 +17,75 @@
         </div>
     </div>
     <div class="row justify-content-center mt-5">
-    {% for monster in getMonster %}
-        <div class="col-sm-6 col-md-4">
-            <div class="card mb-5">
-                <img src="{{ monster.picture }}" class="card-img-top" alt="...">
-                <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title text-center mb-5">{{ monster.name }}</h5>
-                    <p class="card-text text-center"><i>{{ monster.id * 500 }} €</i></p>
-                    <p class="card-text text-center"><i>{{ monster.id * 0.06 }} <i class="fab fa-bitcoin"></i></i></p>
+        {% for monster in getMonster %}
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-5">
+                    <img src="{{ monster.picture }}" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title text-center mb-5">{{ monster.name }}</h5>
+                        <p class="card-text text-center"><i>{{ monster.id * 500 }} €</i></p>
+                        <p class="card-text text-center"><i>{{ monster.id * 0.06 }} <i class="fab fa-bitcoin"></i></i>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
-    {% for movie in getMovie %}
-        <div class="col-sm-6 col-md-4">
-            <div class="card mb-5">
-                <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
-                <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title mb-5">{{ movie.title | replace({'_': " "}) }}</h5>
-                    <p class="card-text text-center"><i>599 €</i></p>
-                    <p class="card-text text-center"><i>{{ 599 * 0.00012 }} <i class="fab fa-bitcoin"></i></i></p>
+        {% endfor %}
+        {% for movie in getMovie %}
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-5">
+                    <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title mb-5">{{ movie.title | replace({'_': " "}) }}</h5>
+                        <p class="card-text text-center"><i>599 €</i></p>
+                        <p class="card-text text-center"><i>{{ 599 * 0.00012 }} <i class="fab fa-bitcoin"></i></i></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
     </div>
-    <div class="container text-center"><a href="/paiement/index" class="btn btn-lg btn-primary">Procéder au paiement</a></div>
-
 
     <h2 class="text-center" style="color:red"><br><br>{{ panierVide.0 }}</h2>
 
+    <h2 style="text-align: center">La dernière étape !</h2>
+    <form method="post">
+        <div class="container w-50">
+            <div class="form-group" method="post">
+                <input type="text" class="form-control" id="inputVictimName" placeholder="Nom de la victime"
+                       name="VictimName">
+            </div>
+            <div class="form-group" method="post">
+                <input type="text" class="form-control" id="inputVictimAddress" placeholder="Adresse de la victime"
+                       name="VictimAddress">
+            </div>
+            <div>
+                <div class="form-group">
+
+                    <select id="inputParentalLink" class="form-control" name="VictimType">
+                        <option selected>Type de victime</option>
+                        <option value="Famille">Famille</option>
+                        <option value="Ami">Ami</option>
+                        <option value="Voisin">Voisin</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <select id="inputDuration" class="form-control" name="VictimPrestation">
+                        <option selected>Type de prestation</option>
+                        <option name1="Assassinat">Assassinat</option>
+                        <option name2="Peur-bleue">Peur bleue</option>
+                        <option name3="Pour-le-plaisir">Pour le plaisir</option>
+                    </select>
+                </div>
+                <div class="date mt-5" data-provide="datepicker">
+                    <label for="input-group date" class="mr-2 mt-1">Date de l'Exécution</label>
+                    <input type="date" id="input-group date" value="2019-01-01" min="2019-01-01" class="form-control"
+                           name="Execution Date">
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-5"><button type="submit" formaction="/Getpanier/monPanier" class="btn btn-lg btn-primary">Procéder
+                au
+                paiement</button>
+        </div>
+    </form>
 {% endblock %}
