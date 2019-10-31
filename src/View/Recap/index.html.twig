@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <div class="container">
+        <div class="w-50 mx-auto" style="text-align: center; border: 10px solid orange; border-radius: 10px">
+            <h1> Merci de votre confiance</h1>
+            <p>Votre victime :<strong style="color: orange">{{ monRecap.0 }}</strong> </p>
+            <p>L'adresse du méfait : <strong style="color: orange">{{ monRecap.1 }}</strong></p>
+            <p>Votre lien de parenté : <strong style="color: orange">{{ monRecap.2 }}</strong></p>
+            <p>Action requise : <strong style="color: orange">{{ monRecap.3 }}</strong></p>
+            <p> le <strong style="color: orange">{{ monRecap.4 }}</strong></p>
+        </div>
+    </div>
+{% endblock %}
