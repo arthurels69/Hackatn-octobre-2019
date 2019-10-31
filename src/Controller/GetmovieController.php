@@ -9,7 +9,7 @@ class GetmovieController extends AbstractController
     public function movieCookie()
     {
         $movieId = $_POST['id'];
-        setcookie('movieId', $movieId);
-        header('location:/Monster/index');
+        setcookie('movieId', "$movieId", time() + 3600, "/");
+        header('location:/Panier/index');
     }
 }

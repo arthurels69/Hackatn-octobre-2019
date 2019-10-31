@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Model\AbstractManager;
@@ -8,11 +9,16 @@ class MonsterController extends AbstractController
 {
     public function index()
     {
+
         $apiManager = new ApiManager();
-        $getMovie = $apiManager->getAllMovies();
+        if (!isset($_POST['level']) || ($_POST['level']) == 'all') {
+            $getMonsters = $apiManager->getAllMonsters();
+            return $this->twig->render('Monster/index.html.twig', ['monsters' => $getMonsters]);
 
-        $getMonsters = $apiManager->getAllMonsters();
+        }else{
+            $getMonsters = $apiManager->getAllMonstersById($_POST['level']);
+            return $this->twig->render('Monster/index.html.twig', ['monsters' => $getMonsters]);
+        }
+}
 
-        return $this->twig->render('Monster/index.html.twig', ['contents' => $getMovie, 'monsters' => $getMonsters]);
-    }
 }
