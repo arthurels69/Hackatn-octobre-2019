@@ -3,7 +3,15 @@
 {% block content %}
 
 <div class="offset-2 col-8 text-center mt-5">
-    <p>Bravo,  vous avez candidatés </p>
+    <p>Bravo,  vous avez candidaté retrouvez votre carte, nous vous contacterons pour un prochain meutre ! </p>
 </div>
-
+    <div class="col-sm-6 col-md-4 mx-auto mt-5 justify-content-center">
+        <div class="card ">
+            <img src="/assets/img/{{ pathImg }}" class="card-img-top" alt="img du candidat">
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title text-center">{{ nom }}</h5>
+                <p class="card-text text-center"><i>{{ description }}</i></p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
