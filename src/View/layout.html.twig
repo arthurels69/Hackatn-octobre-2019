@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="FR">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,6 +8,7 @@
     <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="/assets/css/Navigation-with-Button.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 
     {% block stylesheet %}{% endblock %}
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -17,7 +17,7 @@
 
 <body>
 <nav class="navbar navbar-light navbar-expand-md navigation-clean-button mb-3">
-    <div class="container"><a class="navbar-brand" href="/">HallOfWhine</a>
+    <div class="container"><a class="navbar-brand" href="/" style="color: orange">RentAMonster</a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
                     class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse"
@@ -25,10 +25,13 @@
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/">Accueil</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/monster/index">Réservation</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="/api/Candidature">Carrières</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/Carriere/Candidature">Carrières</a></li>
             </ul>
-            <span class="navbar-text actions"> <a class="login" href="#">Log in</a>
-                <a class="btn btn-light action-button" role="button" href="#">Sign Up</a>
+
+            <span class="navbar-text actions">
+                <a class="btn btn-light action-button" role="button" href="/{{ lienLog }}">{{ log }}</a>
+
+        
                 <a href="/Panier/index"><i class="fas fa-shopping-cart"></i></a>
                 </a>
         </div>
