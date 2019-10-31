@@ -8,6 +8,7 @@ class PaiementController extends AbstractController
 {
     public function index()
     {
-        return $this->twig->render('Paiement/index.html.twig');
+        $log='Login';
+        return $this->twig->render('Paiement/index.html.twig', ['log'=>$log]);
     }
 }

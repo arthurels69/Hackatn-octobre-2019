@@ -10,9 +10,14 @@ class CarriereController extends AbstractController
 
     public function candidature()
     {
-        $loginName=$_SESSION['loginname'];
+        $log='Login';
+        if (isset($_SESSION['loginname'])) {
+            $loginName = $_SESSION['loginname'];
 
-        return $this->twig->render('Carriere/Candidature.html.twig',['loginname'=>$loginName]);
+            return $this->twig->render('Carriere/Candidature.html.twig', ['loginname' => $loginName, 'log'=>$log]);
+        }else{
+            header('location:/login/login');
+        }
     }
 
     public function Validation()
@@ -31,8 +36,7 @@ class CarriereController extends AbstractController
         $nom = $_POST['nom'];
         $description=$_POST['description'];
 
-
-        return $this->twig->render('Carriere/Validation.html.twig', ['nom' => $nom, 'pathImg' => $pathImg, 'description'=>$description]);
+        return $this->twig->render('Carriere/Validation.html.twig', ['nom' => $nom, 'pathImg' => $pathImg, 'description' => $description]);
     }
 
 }

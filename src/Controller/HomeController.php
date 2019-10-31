@@ -25,7 +25,10 @@ class HomeController extends AbstractController
 
     public function index()
     {
-        $log='login';
+
+        $apiManager = new ApiManager();
+        $getMonsters = $apiManager->getAllMonsters();
+        $log='Login';
         $lienLog='login/login';
         if (isset($_POST['loginname'])){
             $_SESSION['loginname']= $_POST['loginname'];
@@ -33,16 +36,13 @@ class HomeController extends AbstractController
             $_COOKIE['loginname'] = $_POST['loginname'];
 
         }
-        if(isset($_SESSION['loginname'])){
-            $log='logout';
+        if(isset($_COOKIE['login'])){
+            $log='Logout';
             $lienLog='logout.php';
+        }else{
+            $log='Login';
+            $lienLog='login/login';
         }
-
-
-
-        $apiManager = new ApiManager();
-        $getMonsters = $apiManager->getAllMonsters();
         return $this->twig->render('Home/index.html.twig',['monsters' => $getMonsters, 'log'=>$log, 'lienLog'=>$lienLog]);
-
     }
 }
