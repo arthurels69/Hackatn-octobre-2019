@@ -1,3 +1,24 @@
 .card {
     margin-right: 20px;
 }
+.content-imagia{
+    display: contents;
+}
+.carousel{
+    position: relative;
+}
+.carousel-heading{
+    font-family: 'Griffy', cursive;
+    color: white;
+    font-size: 5vw;
+    opacity: 0.9;
+}
+.payment{
+    width:50%;
+    margin:auto;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+
+}

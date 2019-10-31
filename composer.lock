@@ -1,11 +1,47 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c6650372f7feadb3c7f9919b5d2d8eb",
+    "content-hash": "1deb793ae7251208b12acf1063740fdd",
     "packages": [
+        {
+            "name": "blockchain/blockchain",
+            "version": "v1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blockchain/api-v1-client-php.git",
+                "reference": "590c83b7fee24f43828bf9587fecbc97ee7f75be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blockchain/api-v1-client-php/zipball/590c83b7fee24f43828bf9587fecbc97ee7f75be",
+                "reference": "590c83b7fee24f43828bf9587fecbc97ee7f75be",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Blockchain\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Blockchain API client library",
+            "homepage": "https://github.com/blockchain/api-v1-client-php",
+            "keywords": [
+                "bitcoin",
+                "blockchain"
+            ],
+            "time": "2017-06-13T13:15:17+00:00"
+        },
         {
             "name": "psr/log",
             "version": "1.1.1",

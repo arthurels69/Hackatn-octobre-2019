@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="/assets/css/Navigation-with-Button.css">
+
     {% block stylesheet %}{% endblock %}
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="icon" href="../../public/assets/img/favicon.png">
+    <link rel="icon" href="/assets/img/favicon.png">
 </head>
 
 <body>
-<nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-    <div class="container"><a class="navbar-brand" href="#">HallOfWhine</a>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button mb-3">
+    <div class="container"><a class="navbar-brand" href="/">HallOfWhine</a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
                     class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse"
@@ -28,7 +29,8 @@
             </ul>
             <span class="navbar-text actions"> <a class="login" href="#">Log in</a>
                 <a class="btn btn-light action-button" role="button" href="#">Sign Up</a>
-            </span>
+                <a href="/Panier/index"><i class="fas fa-shopping-cart"></i></a>
+                </a>
         </div>
     </div>
 </nav>
@@ -49,6 +51,8 @@
 </div>
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/3c89dcba84.js" crossorigin="anonymous"></script>
+
 {% block javascript %}{% endblock %}
 
 </body>

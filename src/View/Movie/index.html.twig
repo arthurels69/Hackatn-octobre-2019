@@ -1,19 +1,41 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="d-flex justify-content-center">Choisissez le scénario d'exécution de votre victime !</h3>
+        </div>
+        <div class="col-12">
+            <form class="form-inline d-flex justify-content-center border-0 mb-2 mt-2" method="post">
+                <select class="form-control m-1" id="country" name="country">
+                    <option value="">Un scénario ...</option>
+                    <option value="French">Français</option>
+                    <option value="United_States">Américain</option>
+                    <option value="Canada">Canadien</option>
+                    <option value="Italy">Italien</option>
+                    <option value="United_Kindgom">Anglais</option>
+                    <option value="South_Korea">Coréen</option>
+                </select>
+                <button type="submit" class="btn btn-primary m-1">Rechercher</button>
+            </form>
+        </div>
+    </div>
+    <div class="container mt-5">
         <section class="row">
             {% for movie in contents.movies %}
-                <div class="col-xs-4 mb-3">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card mb-5">
                         <img src="{{ movie.posterUrl }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ movie.title }}</h5>
-                            <a type="submit" href="/Api/Validation"  class="btn btn-danger">Choose your Movie</a>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title mb-5">{{ movie.title | replace({'_': " "}) }}</h5>
+                            <form id="test" action="/Getmovie/movieCookie" method="post"><input type="hidden"
+                                                                                                name="id"
+                                                                                                value="{{ movie.id }}"/>
+                                <button type="submit" class="btn btn-danger">Ajouter au panier</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-
             {% endfor %}
         </section>
     </div>
