@@ -1,0 +1,10 @@
+{% block content %}
+monstre vedette fete et soirée :
+{{ monsters.monsters.0.name }}
+monstre vedette saignant:
+
+{% for monster in monsters.monsters %}
+    {{ monster.name }} {{ monster.id }}<br>
+    <img src="{{ monster.picture }}" >
+
+{% endfor %}

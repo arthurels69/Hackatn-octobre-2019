@@ -9,6 +9,8 @@
 namespace App\Controller;
 
 
+use App\Model\ApiManager;
+
 class HomeController extends AbstractController
 {
 
@@ -20,9 +22,12 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $apiManager = new ApiManager();
+        $getMonsters = $apiManager->getAllMonsters();
+        return $this->twig->render('Home/index.html.twig',['monsters' => $getMonsters]);
 
     }
 }

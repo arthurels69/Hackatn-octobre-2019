@@ -2,51 +2,72 @@
 
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/card-image-zoom-on-hover.css">
     <link rel="stylesheet" href="/assets/css/Model-Card-Style-1.css">
     <link rel="stylesheet" href="/assets/css/Team-with-rotating-cards.css">
+    <link href="https://fonts.googleapis.com/css?family=Griffy&display=swap" rel="stylesheet">
+
 {% endblock %}
 
 {% block content %}
-    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+
+    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+        <!--Slides-->
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active"><img class="w-100 d-block"
-                                                   src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-                                                   alt="Slide Image"></div>
-            <div class="carousel-item"><img class="w-100 d-block"
-                                            src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-                                            alt="Slide Image"></div>
-            <div class="carousel-item"><img class="w-100 d-block"
-                                            src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-                                            alt="Slide Image"></div>
+            <div class="carousel-item active">
+                <div class="view d-flex justify-content-center align-items-center">
+                    <p class="position-absolute carousel-heading" style="color:white ">Une vie à ôter</p>
+                    <img class="d-block w-100" src="assets/img/la-mooort.jpg"
+                         alt="First slide">
+                    <div class="mask rgba-black-light"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view d-flex justify-content-center align-items-center">
+                    <p class="position-absolute carousel-heading" style="color:white">Un évènement particulier</p>
+                    <img class="d-block w-100" src="assets/img/halloween.jpg"
+                         alt="Second slide">
+                    <div class="mask rgba-black-strong"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view d-flex">
+                    <p class="position-absolute carousel-heading ml-5" style="color:white">Remplis ton panier !</p>
+                    <img class="d-block w-100" src="assets/img/black-face.jpg"
+                         alt="Third slide">
+                    <div class="mask rgba-black-slight"></div>
+                </div>
+            </div>
         </div>
-        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span
-                        class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a
-                    class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span
-                        class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
-        <ol
-                class="carousel-indicators">
-            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-1" data-slide-to="1"></li>
-            <li data-target="#carousel-1" data-slide-to="2"></li>
-        </ol>
+        <!--/.Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-ohttps://hackathon-wild-hackoween.herokuapp.com/nly">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
     </div>
     <section class="card-section-imagia">
-        <h1>Our team</h1>
-        <h2>Posset maiora firmatum nunc cuniculis</h2>
+        <h1>Nos monstres vedettes</h1>
+        <h2>Trouvez votre arme soeur</h2>
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-4">
                     <div class="card-container-imagia">
                         <div class="card-imagia">
                             <div class="front-imagia">
-                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067">
+                                <div class="cover-imagia"><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLK6apSYrZD1cd7AkZOZdrg-yOz5HO0vDuRikUB7Fh8GzkczmSQ&s">
                                 </div>
                                 <div class="user-imagia"><img class="img-circle" alt=""
-                                                              src="https://unsplash.it/120/120?image=64"></div>
+                                                              src="{{ monsters.monsters.0.picture }}"></div>
                                 <div class="content-imagia">
-                                    <h3 class="name-imagia">John Doe</h3>
-                                    <p class="subtitle-imagia">Subtitle </p>
+                             <<<<<<< homepage       <h3 class="name-imagia mt-2">{{ monsters.monsters.0.name }}</h3>
+                                    <p class="subtitle-imagia" style="visibility: hidden">Subtitle </p>
                                     <p class="text-center"><em>Tantum autem cuique tribuendum, primum quantum ipse
                                             efficere possis, deinde etiam quantum ille quem diligas atque adiuves.</em>
                                     </p>
@@ -54,21 +75,46 @@
                                 <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
                             </div>
                             <div class="back-imagia">
-                                <div class="content-imagia content-back-imagia">
+                                <div class="content-imagia d-flex justify-content-center ">
                                     <div>
-                                        <h3 class="text-center">Lorem Ipsum</h3>
-                                        <p class="text-center">Et hanc quidem praeter oppida multa duae civitates
+
+                                       <img class="img-fluid rounded-circle img-thumbnail mt-2 "src="{{ monsters.monsters.0.picture }}">
+                                    </div>
+                                </div>
+
+
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9caglBGfm8Ww94b6FxmPg052Y-oYZvlbDtcxbScFRCBXO5yBZ&s">
+                                </div>
+                                <div class="user-imagia"><img class="img-circle" alt="" src="{{ monsters.monsters.6.picture }}"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia mt-2">{{ monsters.monsters.6.name }}</h3>
+                                    <p class="subtitle-imagia" style="visibility: hidden">Subtitle </p>
+                                    <p class="text-center"><em>Tantum autem cuique tribuendum, primum quantum ipse
+                                            efficere possis, deinde etiam quantum ille quem diligas atque adiuves. </em>
+                                    </p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia d-flex justify-content-center ">
+                                    <div>
+
+                                        <h3 class="text-center mb-5 mt-5">{{ monsters.monsters.6.name }}</h3>
+                                        <p class="text-center ml-3 mr-3">Et hanc quidem praeter oppida multa duae civitates
                                             exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam
                                             Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut
                                             rebellatrix interneciva
                                             aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
-                                    </div>
-                                </div>
-                                <div class="footer-imagia">
-                                    <div class="social-imagia text-center"><a href="#"><i
-                                                    class="fa fa-facebook"></i></a><a href="#"><i
-                                                    class="fa fa-linkedin"></i></a><a href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
+               </div>
                                 </div>
                             </div>
                         </div>
@@ -78,12 +124,13 @@
                     <div class="card-container-imagia">
                         <div class="card-imagia">
                             <div class="front-imagia">
-                                <div class="cover-imagia cover-gradient"></div>
+                                <div class="cover-imagia"><img alt="" src="data:image/jpeg;base64,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">
+                                </div>
                                 <div class="user-imagia"><img class="img-circle" alt=""
-                                                              src="https://unsplash.it/120/120?image=64"></div>
+                                                              src="{{ monsters.monsters.19.picture }}"></div>
                                 <div class="content-imagia">
-                                    <h3 class="name-imagia">John Doe</h3>
-                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <h3 class="name-imagia mt-2">{{ monsters.monsters.19.name }}</h3>
+                                    <p class="subtitle-imagia" style="visibility: hidden">Subtitle </p>
                                     <p class="text-center"><em>Tantum autem cuique tribuendum, primum quantum ipse
                                             efficere possis, deinde etiam quantum ille quem diligas atque adiuves. </em>
                                     </p>
@@ -91,59 +138,12 @@
                                 <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
                             </div>
                             <div class="back-imagia">
-                                <div class="content-imagia content-back-imagia">
+                                <div class="content-imagia d-flex justify-content-center ">
                                     <div>
-                                        <h3 class="text-center">Lorem Ipsum</h3>
-                                        <p class="text-center">Et hanc quidem praeter oppida multa duae civitates
-                                            exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam
-                                            Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut
-                                            rebellatrix interneciva
-                                            aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+
+                                        <img class="img-fluid img-thumbnail rounded-circle mt-2 "src="{{ monsters.monsters.19.picture }}">
+
                                     </div>
-                                </div>
-                                <div class="footer-imagia">
-                                    <div class="social-imagia text-center"><a href="#"><i
-                                                    class="fa fa-facebook"></i></a><a href="#"><i
-                                                    class="fa fa-linkedin"></i></a><a href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="card-container-imagia">
-                        <div class="card-imagia">
-                            <div class="front-imagia">
-                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067">
-                                </div>
-                                <div class="user-imagia"><img class="img-circle" alt=""
-                                                              src="https://unsplash.it/120/120?image=64"></div>
-                                <div class="content-imagia">
-                                    <h3 class="name-imagia">John Doe</h3>
-                                    <p class="subtitle-imagia">Subtitle </p>
-                                    <p class="text-center"><em>Tantum autem cuique tribuendum, primum quantum ipse
-                                            efficere possis, deinde etiam quantum ille quem diligas atque adiuves. </em>
-                                    </p>
-                                </div>
-                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
-                            </div>
-                            <div class="back-imagia">
-                                <div class="content-imagia content-back-imagia">
-                                    <div>
-                                        <h3 class="text-center">Lorem Ipsum</h3>
-                                        <p class="text-center">Et hanc quidem praeter oppida multa duae civitates
-                                            exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam
-                                            Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut
-                                            rebellatrix interneciva
-                                            aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
-                                    </div>
-                                </div>
-                                <div class="footer-imagia">
-                                    <div class="social-imagia text-center"><a href="#"><i
-                                                    class="fa fa-facebook"></i></a><a href="#"><i
-                                                    class="fa fa-linkedin"></i></a><a href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
                                 </div>
                             </div>
                         </div>
@@ -154,28 +154,27 @@
     </section>
     <section class="testimonials text-center bg-light">
         <div class="container">
-            <h2 class="mb-5">What people are saying...</h2>
-            <div class="row">
-                <div class="col-lg-4">
+            <h2 class="mb-5">Ce qu'on dit de nous ...</h2>
+            <div class="row     justify-content-center">
+                <div class="col-lg-3">
                     <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
-                                                                            src="assets/img/Matthieu.jpg">
+                                                                            src="/assets/img/Matthieu.jpg">
                         <h5>Matthieu M.</h5>
-                        <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+                        <p class="font-weight-light mb-0">"Excellent! Merci beaucoup les gars! Grâce à vous j'ai un super poste de formateur à la Wild!"</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="offset-1 col-lg-3">
                     <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
-                                                                            src="assets/img/Alban.jpg">
+                                                                            src="/assets/img/Alban.jpg">
                         <h5>Alban D.</h5>
-                        <p class="font-weight-light mb-0">"company name" is amazing. I've been using it to kill a lot of
-                            super nice students."</p>
+                        <p class="font-weight-light mb-0">"D'une efficacité redoutable. J'ai utilisé leurs services afin d'éliminer les étudiants de ma promo!"</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="offset-1 col-lg-3">
                     <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
-                                                                            src="assets/img/Grégory.png">
+                                                                            src="/assets/img/Grégory.png">
                         <h5>Grégory P.</h5>
-                        <p class="font-weight-light mb-0">"Thanks so much for making murders available to us!"</p>
+                        <p class="font-weight-light mb-0">"Les nerfs c'est bien, tuer les gens c'est mieux! Merci."</p>
                     </div>
                 </div>
             </div>
