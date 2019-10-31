@@ -17,7 +17,6 @@ use Twig\Loader\FilesystemLoader;
 /**
  *
  */
-    session_start();
 
 abstract class AbstractController
 {
