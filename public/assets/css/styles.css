@@ -20,5 +20,8 @@
     border-radius: 5px;
     display: flex;
     justify-content: center;
-
+}
+*{
+    font-family: 'Gloria Hallelujah', sans-serif;
+;
 }
