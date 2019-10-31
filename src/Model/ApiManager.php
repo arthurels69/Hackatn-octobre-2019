@@ -21,15 +21,28 @@ class ApiManager {
         $getMovies = $this->createQuery('movies');
         return $getMovies;
     }
+    public function getAllMoviesByCountry(string $country)
+    {
+        $getMovies = $this->createQuery('movies/search/country/' . $country);
+        return $getMovies;
+    }
+    public function getAllMoviesById(string $id)
+    {
+        $getMovies = $this->createQuery('movies/' . $id);
+        return $getMovies;
+    }
 
     public function getAllMonsters(){
         $getMonsters = $this->createQuery('monsters');
-
+        return $getMonsters;
+    }
+    public function getMonsterId(string $id){
+        $getMonsters = $this->createQuery('monsters/' . $id);
         return $getMonsters;
     }
 
     public function getAllMonstersById(string $id){
-        $getMonstersById = $this->createQuery('monsters/' . $id);
+        $getMonstersById = $this->createQuery('monsters/search/level/' . $id);
         return $getMonstersById;
     }
 }
