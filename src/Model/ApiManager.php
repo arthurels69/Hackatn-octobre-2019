@@ -22,13 +22,21 @@ class ApiManager {
         return $getMovies;
     }
 
-    public function getAllMonsters(){
+    public function getAllMoviesById(string $id)
+    {
+        $getMoviesById = $this->createQuery('movies/' . $id);
+        return $getMoviesById;
+    }
+
+    public function getAllMonsters()
+    {
         $getMonsters = $this->createQuery('monsters');
         var_dump($getMonsters);
         return $getMonsters;
     }
 
-    public function getAllMonstersById(string $id){
+    public function getAllMonstersById(string $id)
+    {
         $getMonstersById = $this->createQuery('monsters/' . $id);
         return $getMonstersById;
     }
