@@ -18,7 +18,7 @@ class CarriereController extends AbstractController
     public function Validation()
     {
         if (isset($_FILES['picture'])) {
-            $dossier = '/home/arthur/quetes/hackaton halloween/Hackaton-Halloween/public/assets/img/';
+            $dossier = '../public/assets/img/';
             $extension = strrchr($_FILES['picture']['name'], ".");
 
             $destinationName = 'image' . uniqid() . $extension;
@@ -30,7 +30,7 @@ class CarriereController extends AbstractController
         }
         $nom = $_POST['nom'];
         $description=$_POST['description'];
-        $loginName=$_COOKIE['loginname'];
+
 
         return $this->twig->render('Carriere/Validation.html.twig', ['nom' => $nom, 'pathImg' => $pathImg, 'description'=>$description]);
     }
