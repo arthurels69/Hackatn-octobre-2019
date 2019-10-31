@@ -1,0 +1,37 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+
+    <div class="container "></div>
+    <div class="text-center offset-2 col-8 mt-5 mb-5">
+        <p>Si vous vous sentez capable vous pouvez rejoindre notre réseau, il vous suffit de répondre à quelques
+            questions <br></p><p> et
+            de nous envoyer votre photo :</p>
+    </div>
+    <form action="/Carriere/Validation" method="post" enctype="multipart/form-data">
+
+
+        <div class="text-center offset-4 col-4 mb-3 ">
+            <label>Votre Nom</label><br>
+            <input name="nom" required>
+        </div>
+        <div class="text-center offset-4 col-4 mb-3 ">
+            <label>Votre Mail</label><br>
+            <input name="mail" required><br>
+        </div>
+        <div class="text-center offset-4 col-4 mb-3">
+            <label>Vos Talents</label><br>
+            <textarea name="description" required></textarea><br>
+        </div>
+        <div class="text-center offset-4 col-4 mb-5">
+            <input class="mt-5  " type="file" name="picture" required/>
+            <input type="submit" value="Send"/>
+
+        </div>
+    </form>
+
+
+
+
+{% endblock %}
